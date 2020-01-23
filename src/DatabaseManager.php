@@ -17,6 +17,8 @@ interface DatabaseManager {
 	public function fetchRow(string $query, array $params = null, array $opt = []);
 
 	public function fetchArray(string $query, array $params = null, array $opt = []);
+	
+	public function fetchArrayWithCount(string $query, array $params = null, array $opt = []);
 
 	public function connect(array $settings);
 	
