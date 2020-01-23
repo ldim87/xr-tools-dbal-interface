@@ -22,4 +22,19 @@ interface DatabaseManager {
 
 	public function connect(array $settings);
 	
+	/**
+	 * MySQL transaction start
+	 */
+	public function start();
+	
+	/**
+	 * MySQL transaction rollback
+	 */
+	public function rollback();
+	
+	/**
+	 * MySQL transaction commit
+	 */
+	public function commit();
+	
 }
