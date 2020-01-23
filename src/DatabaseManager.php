@@ -17,7 +17,24 @@ interface DatabaseManager {
 	public function fetchRow(string $query, array $params = null, array $opt = []);
 
 	public function fetchArray(string $query, array $params = null, array $opt = []);
+	
+	public function fetchArrayWithCount(string $query, array $params = null, array $opt = []);
 
 	public function connect(array $settings);
+	
+	/**
+	 * MySQL transaction start
+	 */
+	public function start();
+	
+	/**
+	 * MySQL transaction rollback
+	 */
+	public function rollback();
+	
+	/**
+	 * MySQL transaction commit
+	 */
+	public function commit();
 	
 }
