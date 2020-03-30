@@ -51,4 +51,6 @@ interface DatabaseManager {
 	 * @param array  $opt        Options
 	 */
 	public function set(array $data, string $table_name, $index = null, array $opt = []);
+
+	public function genPartSQL(array $data = [], string $glue = ', '): array ;
 }
