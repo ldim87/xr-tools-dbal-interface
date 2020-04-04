@@ -24,8 +24,6 @@ interface DatabaseManager {
 
 	public function getAffectedRows();
 
-	public function getDebugMessages();
-
 	public function getQueryCollection();
 	
 	/**
