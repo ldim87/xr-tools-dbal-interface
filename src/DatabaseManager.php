@@ -25,21 +25,12 @@ interface DatabaseManager {
 	public function getAffectedRows();
 
 	public function getQueryCollection();
-	
-	/**
-	 * MySQL transaction start
-	 */
-	public function start();
-	
-	/**
-	 * MySQL transaction rollback
-	 */
-	public function rollback();
-	
-	/**
-	 * MySQL transaction commit
-	 */
-	public function commit();
+
+	public function start(bool $debug = false): bool;
+
+	public function rollback(bool $debug = false): bool;
+
+	public function commit(bool $debug = false): bool;
 
 	/**
 	 * Insert / Update table via params
