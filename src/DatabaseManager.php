@@ -17,8 +17,6 @@ interface DatabaseManager {
 	public function fetchRow(string $query, array $params = null, array $opt = []);
 
 	public function fetchArray(string $query, array $params = null, array $opt = []);
-	
-	public function fetchArrayWithCount(string $query, array $params = null, array $opt = []);
 
 	public function setConnectionParams(array $settings);
 
@@ -40,6 +38,4 @@ interface DatabaseManager {
 	 * @param array  $opt        Options
 	 */
 	public function set(array $data, string $table_name, $index = null, array $opt = []);
-
-	public function genPartSQL(array $data = [], string $glue = ', '): array ;
 }
