@@ -10,13 +10,13 @@ namespace XrTools;
  */
 interface DatabaseManager {
 
-	public function query(string $query, array $params = null, array $opt = []);
+	public function query(string $query, ?array $params = null, array $opt = []);
 
-	public function fetchColumn(string $query, array $params = null, array $opt = []);
+	public function fetchColumn(string $query, ?array $params = null, array $opt = []);
 
-	public function fetchRow(string $query, array $params = null, array $opt = []);
+	public function fetchRow(string $query, ?array $params = null, array $opt = []);
 
-	public function fetchArray(string $query, array $params = null, array $opt = []);
+	public function fetchArray(string $query, ?array $params = null, array $opt = []);
 
 	public function setConnectionParams(array $settings);
 
